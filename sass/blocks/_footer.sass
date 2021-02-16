@@ -1,0 +1,42 @@
+.footer
+  height: 90px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-top: 1px solid $blue
+
+  &-block
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding-left: 5px
+    padding-right: 5px
+    +Reg
+
+  &__text
+    color: $blue
+    margin: 0
+    padding: 0
+    font-size: 18px
+    margin-bottom: 5px
+    max-width: 140px
+    +Bold
+
+  &__link
+    font-size: 18px
+    color: $red
+
+  &-whatsApp
+    display: flex
+    flex-direction: row
+
+  &__icone
+    width: 40px
+    height: 40px
+    margin-left: 10px
+
+@media (min-width: 992px)
+  a
+    cursor: pointer
+             

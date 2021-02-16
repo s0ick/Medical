@@ -1,0 +1,166 @@
+*
+  box-sizing: border-box
+img
+  max-width: 100%
+button
+  outline: none
+
+input:focus
+  border-radius: 8px
+  outline: 1px solid $blue  
+
+body.modal-open 
+  overflow: hidden 
+
+.container
+  width: 1200px
+  margin: auto
+  position: relative
+
+input.invalid
+  border: 1px solid red
+
+div.invalid
+  font-size: 12px
+  text-align: right
+  margin-right: 10px
+  color: red
+  margin-bottom: 7px
+  margin-top: -20px
+  width: 100%
+  +Reg  
+
+input.er-feedback
+  border: 1px solid red
+
+div.er-feedback
+  display: inline
+  position: absolute
+  font-size: 12px
+  text-align: right
+  color: red
+  +Reg
+
+#name-error
+  top: 67%
+  right: 28%
+
+#phone-error
+  top: 67%
+  right: 9%
+
+input.er-hero
+  border: 1px solid red
+
+div.er-hero
+  font-size: 12px
+  text-align: right
+  color: red
+  margin-top: 5px
+  margin-bottom: -15px
+  +Reg
+
+.blur
+  -webkit-filter: blur(10px)
+  -moz-filter: blur(10px)
+  -o-filter: blur(10px)
+  -ms-filter: blur(10px)
+  filter: blur(10px)
+
+a
+  text-decoration: none
+  cursor: default
+
+@keyframes move-light
+  from 
+    transform: translateX(-4em) skewX(-45deg)
+  80%
+    transform: translateX(-4em) skewX(-45deg)   
+  to 
+    transform: translateX(10em) skewX(-45deg)
+
+::-webkit-scrollbar 
+  width: 6px
+::-webkit-scrollbar-button 
+  height: 0 
+  background-color: #18181f 
+::-webkit-scrollbar-track   
+  background-color: rgba(153, 153, 153, 0)
+::-webkit-scrollbar-track-piece  
+  background-color: rgba(107, 107, 107, 0.199)
+::-webkit-scrollbar-thumb  
+  height: 50px 
+  background-color: $blue 
+  border-radius: 3px
+::-webkit-scrollbar-corner  
+  background-color: rgba(56, 56, 56, 0)
+::-webkit-resizer 
+  background-color: rgba(0, 0, 0, 0)      
+
+@media (min-width: 992px)
+  a, .button
+    cursor: pointer
+
+  .button
+    &:hover
+      &::before
+        animation: none
+           
+@media (max-width: 1200px)
+  .container
+    width: 960px
+
+  #name-error
+    top: 48%
+    right: 44%
+
+  #phone-error
+    top: 48%
+    right: 21%
+
+@media (max-width: 992px)
+  .container
+    width: 750px
+
+  div.invalid
+    width: 80%
+
+  #name-error
+    top: 66%
+    right: 53%
+
+  #phone-error
+    top: 66%
+    right: 24%
+
+@media (max-width: 768px) 
+  .container
+    max-width: 550px
+
+  div.invalid
+    width: 100% !important  
+
+@media (max-width: 567px)
+  .container
+    max-width: 400px
+
+  div.invalid
+    width: 135% !important 
+
+  div.er-feedback
+    position: initial !important
+    text-align: right
+    margin-right: 10px
+    margin-bottom: 2px
+    margin-top: -10px
+    width: 60%
+
+@media (max-width: 420px)
+  .container
+    max-width: 290px
+
+  div.invalid
+    width: 175% !important   
+
+  div.er-feedback
+    width: 80% 
