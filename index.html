@@ -146,8 +146,22 @@
         <h2 class="hospital__title">Клиники</h2>
 
         <div class="hospital-block">
-          <div class="hospital-slider" id="slider-1">
-
+          <div class="hospital-arrows">
+            <div class="hospital__arrow prev">
+              <span class="hospital__prev"></span>
+            </div>
+            <div class="hospital__arrow next">
+              <span class="hospital__next"></span>
+            </div>
+          </div>
+          <div class="hospital-container">
+            <div class="hospital-slider" id="slider-1">
+              <img src="./img/hospital/1.jpg" alt="Hospital 1" class="hospital__item">
+              <img src="./img/hospital/2.jpg" alt="Hospital 2" class="hospital__item">
+              <img src="./img/hospital/3.jpg" alt="Hospital 3" class="hospital__item">
+              <img src="./img/hospital/4.jpg" alt="Hospital 4" class="hospital__item">
+              <img src="./img/hospital/5.jpg" alt="Hospital 5" class="hospital__item">
+            </div>
           </div>
         </div>
 
@@ -185,46 +199,45 @@
     </div>
   </div>
 
-  <script src="js/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script src="js/jquery.maskedinput.min.js"></script>
-  <script src="js/slick.min.js"></script> 
+  <script src="./js/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./js/jquery.validate.min.js"></script>
+  <script src="./js/jquery.maskedinput.min.js"></script>
+  <script src="./js/slick.min.js"></script> 
 
   <script>
     $(document).ready(function(){
-      $('.slider-1').slick({
+      $('#slider-1').slick({
         infinite: true,
-        prevArrow: $('.slider-1__arrow_left'),
-        nextArrow: $('.slider-1__arrow_right'),
-        slidesToShow: 3,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+        slidesToShow: 1,
         slidesToScroll: 1,
-        centerMode: true,
-        responsive: [
-          {
-            breakpoint: 1200,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              centerMode: false
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              centerMode: false
-            }
-          },
-          {
-            breakpoint: 350,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              centerMode: false
-            }
-          }
-        ]
+        // responsive: [
+        //   {
+        //     breakpoint: 1200,
+        //     settings: {
+        //       slidesToShow: 2,
+        //       slidesToScroll: 1,
+        //       centerMode: false
+        //     }
+        //   },
+        //   {
+        //     breakpoint: 768,
+        //     settings: {
+        //       slidesToShow: 1,
+        //       slidesToScroll: 1,
+        //       centerMode: false
+        //     }
+        //   },
+        //   {
+        //     breakpoint: 350,
+        //     settings: {
+        //       slidesToShow: 1,
+        //       slidesToScroll: 1,
+        //       centerMode: false
+        //     }
+        //   }
+        // ]
       });
     });
   </script>

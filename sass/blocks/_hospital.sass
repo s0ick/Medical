@@ -1,1 +1,77 @@
 .hospital
+  padding-bottom: 50px
+
+  &__title
+    color: $red
+    font-size: 30px
+    text-align: center
+    +Bold
+
+  &__item
+    width: 700px
+    height: 500px  
+
+  &-block
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+
+  &-container
+    width: 700px
+    height: 500px
+
+  &-arrows
+    position: absolute
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 70%
+
+  &__arrow
+    width: 60px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center  
+
+  &__prev, &__next
+    position: relative
+    width: 40px
+    height: 2px
+    background-color: $blue
+    transform: rotate(-45deg)
+    transition: .2s
+    &::after
+      content: ''
+      position: absolute
+      display: block
+      width: 100%
+      height: 100%
+      background-color: $blue
+      transform: rotate(90deg)
+      transition: .2s
+      top: 20px
+      left: -20px
+
+  &__next
+    transform: rotate(-135deg)
+    &::after
+      transform: rotate(90deg)
+      top: -20px
+
+  &__arrow:active
+    .hospital__prev, .hospital__next
+      background-color: $red
+      &::after
+        background-color: $red
+
+@media (min-width: 992px)
+  .hospital
+    &__arrow:hover
+      .hospital__prev, .hospital__next
+        box-shadow: 0 0 20px 2px rgba($blue, .4)
+        &::after
+          box-shadow: 0 0 20px 2px rgba($blue, .4)              
+
+
