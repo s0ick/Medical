@@ -54,7 +54,7 @@
   &-parent
     width: 100%
     display: flex
-    justify-content: center
+    justify-content: flex-start
     align-items: center
     margin-top: 20px
 
@@ -68,4 +68,12 @@
     width: 300px
     height: 50px
     border-radius: 8px
-    +Bold         
+    transition: .2s
+    +Bold
+
+@media (min-width: 992px)
+  .header
+    &__button
+      &:hover
+        background-color: lighten($dark, 45%)
+        color: $blue             

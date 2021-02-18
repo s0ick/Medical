@@ -7,7 +7,8 @@ button
 
 input:focus
   border-radius: 8px
-  outline: 1px solid $blue  
+  border: 1px solid $blue !important
+  outline: none  
 
 body.modal-open 
   overflow: hidden 
@@ -30,17 +31,6 @@ div.invalid
   width: 100%
   +Reg  
 
-input.er-feedback
-  border: 1px solid red
-
-div.er-feedback
-  display: inline
-  position: absolute
-  font-size: 12px
-  text-align: right
-  color: red
-  +Reg
-
 #name-error
   top: 67%
   right: 28%
@@ -48,17 +38,6 @@ div.er-feedback
 #phone-error
   top: 67%
   right: 9%
-
-input.er-hero
-  border: 1px solid red
-
-div.er-hero
-  font-size: 12px
-  text-align: right
-  color: red
-  margin-top: 5px
-  margin-bottom: -15px
-  +Reg
 
 .blur
   -webkit-filter: blur(10px)

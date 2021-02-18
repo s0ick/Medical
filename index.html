@@ -25,9 +25,9 @@
         </div> 
 
         <div class="navbar-menu">
-          <a class="navbar__elem">О нас</a>
-          <a class="navbar__elem">Детоксикация</a>
-          <a class="navbar__elem">Клиники</a>
+          <a href="#about" class="navbar__elem">О нас</a>
+          <a href="#detox" class="navbar__elem">Детоксикация</a>
+          <a href="#hospital" class="navbar__elem">Клиники</a>
         </div>
 
         <div class="navbar-whatsApp">
@@ -56,7 +56,7 @@
           на весь организм
         </p>
         <div class="header-parent">
-          <a href="#" class="header__button">
+          <a href="#form" class="header__button">
             Заказать звонок
           </a>
         </div>
@@ -68,7 +68,7 @@
 
   <main class="main">
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
 
         <h2 class="about__title">О нас</h2>
@@ -88,7 +88,7 @@
       </div>
     </section>
 
-    <section class="detox">
+    <section class="detox" id='detox'>
       <div class="container">
 
         <h2 class="detox__title">Детоксикация</h2>
@@ -117,40 +117,23 @@
             значит, организм не справился 
             с нагрузкой, и <span class="detox__blue">нужна срочная помощь</span>.
           </p>
-          <a href="#" class="detox__link">Подробнее</a>
+          <a href="./second.html" class="detox__link">Подробнее</a>
         </div>
         
 
       </div>
     </section> 
 
-    <section class="form">
-      <div class="container">
-
-        <div class="form-block">
-          <form action="#" class="form-inputs">
-            <h2 class="form__title">Бесплатная консультация</h2>
-  
-            <input class="form__input" type="text" name="Name" placeholder="ФИО">
-            <input class="form__input" type="phone" name="Phone" placeholder="Телефон">
-  
-            <button class="form__button">Отправить</button>
-          </form>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="hospital">
+    <section class="hospital" id="hospital">
       <div class="container">
         <h2 class="hospital__title">Клиники</h2>
 
         <div class="hospital-block">
           <div class="hospital-arrows">
-            <div class="hospital__arrow prev">
+            <div class="hospital__arrow prevHospital">
               <span class="hospital__prev"></span>
             </div>
-            <div class="hospital__arrow next">
+            <div class="hospital__arrow nextHospital">
               <span class="hospital__next"></span>
             </div>
           </div>
@@ -168,8 +151,49 @@
       </div>
     </section>
 
-    <section class="consul"></section>
+    <section class="form">
+      <div class="container">
 
+        <div class="consul">
+         
+          <div class="consul-block">
+            <h3 class="consul__title">Максим Сотсков</h3>
+            <p class="consul__subtitle">Психолог консультант<br>по химической зависимости</p>
+            
+            <div class="consul-arrows">
+              <div class="consul__arrow prevConsul">
+                <span class="consul__prev"></span>
+              </div>
+              <div class="consul__arrow nextConsul">
+                <span class="consul__next"></span>
+              </div>
+            </div>
+            
+            <div class="consul-container">
+              <div class="consul-slider" id="slider-2">
+                <img src="./img/consul/2.jpg" alt="Сertificate 2" class="consul__item">
+                <img src="./img/consul/3.jpg" alt="Сertificate 3" class="consul__item">
+                <img src="./img/consul/4.jpg" alt="Сertificate 4" class="consul__item">
+                <img src="./img/consul/5.jpg" alt="Сertificate 5" class="consul__item">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <form action="#" class="form-inputs" id="form">
+              <h2 class="form__title">Наш человек ответит на все ваши вопросы и поможет с подбором клиники</h2>
+    
+              <input class="form__input" id="name" type="text" name="name" placeholder="ФИО">
+              <input class="form__input" id="phone" type="phone" name="phone" placeholder="Телефон">
+    
+              <button class="form__button" id="form-button">Отправить</button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -195,7 +219,36 @@
 
   <div class="modal-success" id="modal-success">
     <div class="modal-success-dialog">
-      <div class="success"></div>
+      <p class="success"></p>
+    </div>
+  </div>
+
+  <div class="modal-slider" id="modal-slider">
+    <div class="modal-slider-dialog">
+
+      <div class="modal-slider-arrows">
+        <div class="modal-slider__arrow prevModal">
+          <span class="modal-slider__prev"></span>
+        </div>
+        <div class="modal-slider__arrow nextModal">
+          <span class="modal-slider__next"></span>
+        </div>
+      </div>
+      <div class="modal-slider-container">
+        <div class="modal-slider-slider" id="slider-3">
+          <img src="./img/consul/2.jpg" alt="Сertificate 2" class="modal-slider__item">
+          <img src="./img/consul/3.jpg" alt="Сertificate 3" class="modal-slider__item">
+          <img src="./img/consul/4.jpg" alt="Сertificate 4" class="modal-slider__item">
+          <img src="./img/consul/5.jpg" alt="Сertificate 5" class="modal-slider__item">
+        </div>
+
+        <div class="modal-slider__button">
+          <span class="modal-slider__close" id="close1">
+            Закрыть
+          </span>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -205,41 +258,33 @@
   <script src="./js/slick.min.js"></script> 
 
   <script>
-    $(document).ready(function(){
+    $(document).ready(function() {
       $('#slider-1').slick({
         infinite: true,
-        prevArrow: $('.prev'),
-        nextArrow: $('.next'),
+        prevArrow: $('.prevHospital'),
+        nextArrow: $('.nextHospital'),
         slidesToShow: 1,
         slidesToScroll: 1,
-        // responsive: [
-        //   {
-        //     breakpoint: 1200,
-        //     settings: {
-        //       slidesToShow: 2,
-        //       slidesToScroll: 1,
-        //       centerMode: false
-        //     }
-        //   },
-        //   {
-        //     breakpoint: 768,
-        //     settings: {
-        //       slidesToShow: 1,
-        //       slidesToScroll: 1,
-        //       centerMode: false
-        //     }
-        //   },
-        //   {
-        //     breakpoint: 350,
-        //     settings: {
-        //       slidesToShow: 1,
-        //       slidesToScroll: 1,
-        //       centerMode: false
-        //     }
-        //   }
-        // ]
+      });
+
+      $('#slider-2').slick({
+        infinite: true,
+        prevArrow: $('.prevConsul'),
+        nextArrow: $('.nextConsul'),
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+
+      $('#slider-3').slick({
+        infinite: true,
+        prevArrow: $('.prevModal'),
+        nextArrow: $('.nextModal'),
+        slidesToShow: 1,
+        slidesToScroll: 1,
       });
     });
   </script>
+  <script src="./js/main.js"></script>
+
 </body>
 </html>

@@ -1,38 +1,39 @@
-.hospital
-  padding-bottom: 50px
-  padding-top: 20px
-  background: url('../img/hospital/bg.jpg')
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: top left
+.consul
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+
+  &-block
+    width: 50%
+    display: flex
+    align-items: center
+    flex-direction: column
+    position: relative
+    padding-left: 50px
 
   &__title
-    color: #fff
-    font-size: 30px
+    color: $blue
+    font-size: 24px
     text-align: center
     +Bold
 
-  &__item
-    width: 700px
-    height: 500px
-    border-radius: 8px  
-
-  &-block
-    display: flex
-    align-items: center
-    justify-content: center
-    position: relative
-
+  &__subtitle
+    color: $dark
+    font-size: 18px
+    text-align: center
+    +Reg
+    
   &-container
-    width: 700px
-    height: 500px
+    width: 280px
 
   &-arrows
     position: absolute
     display: flex
     justify-content: space-between
     align-items: center
-    width: 70%
+    width: 80%
+    top: 55%
 
   &__arrow
     width: 60px
@@ -45,7 +46,7 @@
     position: relative
     width: 40px
     height: 2px
-    background-color: #fff
+    background-color: $blue
     transform: rotate(-45deg)
     transition: .2s
     &::after
@@ -54,7 +55,7 @@
       display: block
       width: 100%
       height: 100%
-      background-color: #fff
+      background-color: $blue
       transform: rotate(90deg)
       transition: .2s
       top: 20px
@@ -67,17 +68,17 @@
       top: -20px
 
   &__arrow:active
-    .hospital__prev, .hospital__next
-      background-color: #fff
+    .consul__prev, .consul__next
+      background-color: $red
       &::after
-        background-color: #fff
+        background-color: $red
 
 @media (min-width: 992px)
-  .hospital
+  .consul
     &__arrow:hover
-      .hospital__prev, .hospital__next
-        box-shadow: 0 0 20px 2px rgba(#fff, .4)
+      .consul__prev, .consul__next
+        box-shadow: 0 0 20px 2px rgba($blue, .4)
         &::after
-          box-shadow: 0 0 20px 2px rgba(#fff, .4)              
-
-
+          box-shadow: 0 0 20px 2px rgba($blue, .4)
+    &__item
+      cursor: pointer                  

@@ -1,16 +1,15 @@
 .form
   padding-bottom: 50px
-  padding-top: 20px
+  padding-top: 50px
   background: url('../img/form/car.png')
   background-repeat: no-repeat
-  background-size: contain
-  background-position: 420px 72px
+  background-size: 20%
+  background-position: -80px 247px
 
   &-block
     display: flex
-    width: 100%
-    justify-content: flex-end
-    padding-right: 100px
+    width: 50%
+    justify-content: flex-start
 
   &-inputs
     display: flex
@@ -20,14 +19,14 @@
 
   &__title
     color: $red
-    font-size: 30px
+    font-size: 24px
     text-align: center
     +Bold
 
   &__input
     border: none
-    height: 30px
-    width: 250px
+    height: 40px
+    width: 300px
     margin-bottom: 25px
     color: $blue
     box-shadow: 0 0 40px 4px rgba(#000, 0.18)
@@ -39,11 +38,19 @@
   &__button
     background-color: $blue
     color: #fff
-    width: 150px
-    height: 30px
+    width: 180px
+    height: 40px
     border: none
     border-radius: 8px
+    transition: .2s
     +Reg
 
 ::placeholder
-  color: $blue        
+  color: $blue
+
+@media (min-width: 992px)
+  .form
+    &__button
+      &:hover
+        cursor: pointer
+        background-color: lighten($blue, 20%)       
