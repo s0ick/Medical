@@ -1,0 +1,76 @@
+.gallery
+  padding-bottom: 50px
+  padding-top: 20px
+  background: url('../img/hospital/bg.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: top left
+
+  &__title
+    color: #fff
+    font-size: 30px
+    text-align: center
+    +Bold
+
+  &__item
+    width: 350px
+    height: 250px
+    border-radius: 8px
+    outline: none
+    margin-left: 10px
+    margin-right: 10px  
+
+  &-block
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+
+  &-container
+    width: 1100px
+    height: 300px
+
+@media (max-width: 1200px)
+  .gallery
+    &-container
+      width: 900px
+      height: 200px
+
+    &__item
+      width: 300px
+      height: 200px  
+
+
+@media (max-width: 992px)
+  .gallery
+    &-container
+      width: 700px
+      height: 200px
+
+    &__item
+      width: 300px
+      height: 200px
+
+    &__title
+      font-size: 25px   
+
+@media (max-width: 768px)
+  .gallery
+    &-container
+      width: 540px
+      height: 170px
+
+    &__item
+      width: 270px
+      height: 170px
+
+@media (max-width: 567px)
+  .gallery
+    &-container
+      width: 300px
+      height: 200px
+
+    &__item
+      width: 300px
+      height: 200px    
+           

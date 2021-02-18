@@ -14,18 +14,24 @@ const activeModal = (modal) => {
 };
 
 const disableModal = (modal) => {
-  body.style.overflow = 'auto';
-  modal.style.display = 'none';
-  nav.classList.remove('blur');
-  header.classList.remove('blur');
-  main.classList.remove('blur');
-  footer.classList.remove('blur');
+  if(modal === menu) {
+    menu.style.right = '-100%';
+  } else {
+    body.style.overflow = 'auto';
+    modal.style.display = 'none';
+    nav.classList.remove('blur');
+    header.classList.remove('blur');
+    main.classList.remove('blur');
+    footer.classList.remove('blur');
+  }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   const slides = document.querySelectorAll('.consul__item'),
+        menu = document.getElementById('menu'),
+        ellipse = document.getElementById('ellipse'),
         modalSlider = document.getElementById('modal-slider');
 
   slides.forEach(elem => {
@@ -37,12 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  ellipse.addEventListener('click', () => {
+    menu.style.right = '0';
+  });
+
   const scrolling = () => {
     document.body.addEventListener('click', (event) => {
       let target = event.target;
 
       if(target.tagName === 'A' && target.href.indexOf('#') !== -1) {
         event.preventDefault();
+        menu.style.right = '-100%';
 
         const blockID = target.getAttribute('href');
         document.querySelector('' + blockID).scrollIntoView({

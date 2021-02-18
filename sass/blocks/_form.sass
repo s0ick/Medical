@@ -3,8 +3,8 @@
   padding-top: 50px
   background: url('../img/form/car.png')
   background-repeat: no-repeat
-  background-size: 20%
-  background-position: -80px 247px
+  background-size: 325px 230px
+  background-position: -70px 275px
 
   &-block
     display: flex
@@ -53,4 +53,51 @@
     &__button
       &:hover
         cursor: pointer
-        background-color: lighten($blue, 20%)       
+        background-color: lighten($blue, 20%)
+
+
+@media (max-width: 1200px)
+  .form
+    background-position: -120px 275px
+
+@media (max-width: 992px)
+  .form
+    background-position: -70px 605px
+
+    &-block
+      width: 100%
+      justify-content: center
+
+    &__title
+      font-size: 20px   
+
+  .consul
+    flex-direction: column
+
+    &-block
+      width: 100%
+      padding: 0
+      margin-bottom: 40px 
+
+@media (max-width: 768px)
+  .form
+    background-position: -70px 632px
+
+    .slick-dots
+      button::before
+        color: $dark
+
+    .slick-dots li.slick-active button:before
+      color: $dark
+        
+
+@media (max-width: 567px)
+  .form
+    background: none
+
+    &-inputs
+      width: 95%
+
+  .consul
+    &-arrows
+      display: none                

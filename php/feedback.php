@@ -21,7 +21,7 @@ $mail->Port = 465; // TCP port to connect to / этот порт может от
 // Тони старк
 
 $mail->setFrom('medical-site-order@yandex.ru'); // от кого будет уходить письмо?
-$mail->addAddress('danilabrehov@gmail.com');     // Кому будет уходить письмо 
+$mail->addAddress('sotskovmaksim385@gmail.com');     // Кому будет уходить письмо 
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Заявка на обратный звонок';

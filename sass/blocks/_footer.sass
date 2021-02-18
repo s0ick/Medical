@@ -1,9 +1,10 @@
 .footer
-  height: 90px
+  padding-top: 15px
   display: flex
   align-items: center
   justify-content: center
   border-top: 1px solid $blue
+  padding-bottom: 10px
 
   &-block
     display: flex
@@ -36,7 +37,36 @@
     height: 40px
     margin-left: 10px
 
+  &-info
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 15px
+
+  &__date
+    display: block
+    font-size: 16px
+    padding-right: 70px
+    +Reg
+
+  &__conf
+    font-size: 16px
+    text-decoration: underline
+    color: $dark
+    +Reg      
+
 @media (min-width: 992px)
   a
     cursor: pointer
+
+@media (max-width: 420px)
+  #WA2
+    display: none
+
+  .footer
+    &__date
+      padding-right: 0
+
+    &__conf
+      max-width: 165px       
              

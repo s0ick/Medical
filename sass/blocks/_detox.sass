@@ -51,4 +51,36 @@
     &__link:hover
       color: $blue
       &::after
-        background-color: $blue       
+        background-color: $blue 
+
+@media (max-width: 1200px)
+  .detox
+    background-position: 108% 60%
+    background-size: 480px 380px
+
+@media (max-width: 992px)
+  .detox
+    background-position: 115% 60%
+    background-size: 380px 280px
+
+    &-block
+      width: 100%
+      align-items: flex-start
+
+
+    &__title
+      font-size: 25px  
+
+    &__text
+      font-size: 18px
+      max-width: 350px
+
+    &__link
+      font-size: 18px    
+
+@media (max-width: 768px)
+  .detox
+    background: none
+
+    &-block
+      align-items: center              
