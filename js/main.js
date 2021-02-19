@@ -123,7 +123,7 @@ $(document).ready(function() {
           $('.success').html(data);
 
           activeModal(modalSuccess);
-          setTimeout(disableModal(modalSuccess), 4000);
+          setTimeout(() => disableModal(modalSuccess), 4000);
 
           $('#form')[0].reset();
         }
